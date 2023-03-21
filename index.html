@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Qirat's Edge Detection App</title>
+    <style>
+      body {
+        background-color: #F4F4F4;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        color: #333333;
+        font-size: 36px;
+        font-weight: bold;
+      }
+
+      
+      form {
+        text-align: center;
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      
+      label {
+        font-size: 1.2em;
+        font-weight: bold;
+        display: block;
+        margin-top: 20px;
+        color: #333333;
+      }
+      
+      input[type="file"] {
+        margin-top: 10px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        font-size: 16px;
+      }
+      
+      button {
+        background-color: #55B4D4;
+        border: none;
+        color: white;
+        padding: 12px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        margin-top: 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      
+      button:hover {
+        background-color: #2B90A7;
+      }
+      
+      .technique {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .technique label {
+        font-weight: normal;
+        margin-right: 10px;
+        color: #333333;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      
+      .technique input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      /* Media queries */
+      @media (max-width: 767px) {
+        h1 {
+          font-size: 28px;
+        }
+        form {
+          max-width: 90%;
+        }
+        button {
+          max-width: 100%;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Image Edge Detection App</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="img_file">Upload an image:</label>
+      <input type="file" id="img_file" name="img_file">
+      
+      <div class="technique">
+        <label><input type="radio" name="technique" value="canny" checked>Canny</label>
+        <label><input type="radio" name="technique" value="prewitt">Prewitt</label>
+        <label><input type="radio" name="technique" value="robert">Robert</label>
+        <label><input type="radio" name="technique" value="sobel">Sobel</label>
+        <label><input type="radio" name="technique" value="global">Global Thresholding</label>
+        <label><input type="radio" name="technique" value="kmeans">K-Means</label>
+        <label><input type="radio" name="technique" value="otsu">Otsu Thresholding</label>
+      </div>
+            
+            
+        <button type="submit">Detect Edges</button>
+            
+            
+            

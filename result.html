@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edge Detection Result</title>
+    <style>
+      body {
+        background-color: #f1f1f1;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+      
+      a {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+        color: #4CAF50;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      a:hover {
+        color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Edge Detection Result</h1>
+    <img src="data:image/png;base64,{{ edges_base64 }}" alt="Edges">
+    <a href="/">Detect Edges for Another Image</a>
+  </body>
+</html>
